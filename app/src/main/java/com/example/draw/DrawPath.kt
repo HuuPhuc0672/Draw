@@ -16,22 +16,21 @@ class DrawPath @JvmOverloads constructor(
 ) : View(context, attrs, defStyleAttr)
 {
     private  var  paint: Paint?=null
-    private  var path: Path?=null
+    private  var  path: Path?=null
     private  var  mPath: Path?=null
     private  var  pathlist= ArrayList<PainPath>()
     private  var  undonePathlist=ArrayList<PainPath>()
-    private var  mY:Float?=null
+    private  var  mY:Float?=null
     private  var  mX:Float?=null
     private  var  touchTolerance:Float= 4f
-
-
+    private  var  canvas:Canvas? = null
 
 
     init {
         paint = Paint()
        // path =Path()
-        paint!!.color=Color.BLUE
-        paint!!.strokeWidth=10f
+        paint!!.color=Color.RED
+        paint!!.strokeWidth=5f
         paint!!.style=Paint.Style.STROKE
         paint!!.isAntiAlias=true
     }
@@ -121,6 +120,7 @@ class DrawPath @JvmOverloads constructor(
         }
 
     }
+
 
 
 
